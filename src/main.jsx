@@ -10,6 +10,7 @@ import Root from './Router/Root.jsx';
 import Home from './Components/Home/Home.jsx';
 import About from './Components/About/About.jsx';
 import ContactUs from './Components/Contact Us/ContactUs.jsx';
+import Error404 from './Components/Errror404/Error404.jsx';
 
 
 const router = createBrowserRouter([
@@ -32,6 +33,12 @@ const router = createBrowserRouter([
       }
     ]
   },
+
+  {
+    path: '*',
+    element: <Error404></Error404>
+  }
+
 ]);
 
 createRoot(document.getElementById('root')).render(
