@@ -12,10 +12,6 @@ const Slider = () => {
       className="w-full h-[55%]" />
     <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
       <a href="#slide3" className="btn btn-circle">❮</a>
-      <div className='absolute'>
-      <h2 className='relative bottom-8 left-120 text-3xl text-end text-white'>Empowering Business Leaders of Tomorrow</h2>
-      <p className='relative bottom-5 left-120 text-end text-lg text-white'>Join visionary entrepreneurs, investors, and innovators to shape the future of business</p>
-      </div>
       <a href="#slide2" className="btn btn-circle">❯</a>
     </div>
   </div>
@@ -25,11 +21,6 @@ const Slider = () => {
       className="w-full h-[55%]" />
     <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
       <a href="#slide1" className="btn btn-circle">❮</a>
-      <div className='absolute'>
-      <h2 className='relative bottom-8 left-120 text-3xl text-end text-white'>Where Ideas Meet Opportunities
-      </h2>
-      <p className='relative bottom-5 left-120 text-end text-lg text-white'>Connect, collaborate, and grow with industry experts and global thinkers</p>
-      </div>
       <a href="#slide3" className="btn btn-circle">❯</a>
     </div>
   </div>
@@ -39,10 +30,6 @@ const Slider = () => {
       className="w-full h-[55%]" />
     <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
       <a href="#slide2" className="btn btn-circle">❮</a>
-      <div className='absolute'>
-      <h2 className='relative bottom-8 left-120 text-3xl text-end text-white'>Unlock Growth. Build Networks. Lead the Change</h2>
-      <p className='relative bottom-5 left-120 text-end text-lg text-white'>Experience a transformative conference tailored for ambitious professionals and startups</p>
-      </div>
       <a href="#slide1" className="btn btn-circle">❯</a>
     </div>
   </div>

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "event_001",
+    "name": "Tech Innovators Conference 2025",
+    "thumbnail": "https://i.ibb.co.com/TxfxFGr0/2149126949.jpg",
+    "category": "Technology",
+    "date": "2025-05-15",
+    "location": "Dhaka Convention Center, Dhaka",
+    "entry_fee": 500,
+    "description": "An exclusive gathering of tech leaders and innovators from around the world."
+  },
+  {
+    "id": "event_002",
+    "name": "AI & Machine Learning Summit",
+    "thumbnail": "https://i.ibb.co.com/WvcRXg2c/2151003702.jpg",
+    "category": "Artificial Intelligence",
+    "date": "2025-06-10",
+    "location": "Hotel InterContinental, Dhaka",
+    "entry_fee": 750,
+    "description": "Explore cutting-edge AI solutions and real-world applications in diverse industries."
+  },
+  {
+    "id": "event_003",
+    "name": "Future of Web 3.0 Expo",
+    "thumbnail": "https://i.ibb.co.com/ycw5fJyN/2848.jpg",
+    "category": "Blockchain",
+    "date": "2025-07-20",
+    "location": "Sylhet Tech Park, Sylhet",
+    "entry_fee": 600,
+    "description": "Discover the innovations driving the decentralized web and next-gen internet."
+  },
+  {
+    "id": "event_004",
+    "name": "Cybersecurity Conclave 2025",
+    "thumbnail": "https://i.ibb.co.com/6RSy86cL/77676.jpg",
+    "category": "Cybersecurity",
+    "date": "2025-08-05",
+    "location": "Pan Pacific Sonargaon, Dhaka",
+    "entry_fee": 550,
+    "description": "Stay ahead of cyber threats with expert sessions on modern defense strategies."
+  },
+  {
+    "id": "event_005",
+    "name": "Startup Bangladesh Tech Fest",
+    "thumbnail": "https://i.ibb.co.com/84RfwMLK/2816.jpg",
+    "category": "Startups",
+    "date": "2025-09-18",
+    "location": "Innovation Hub, Khulna",
+    "entry_fee": 300,
+    "description": "Connect with early-stage startups, investors, and mentors shaping Bangladesh’s tech future."
+  },
+  {
+    "id": "event_006",
+    "name": "Digital Transformation Summit",
+    "thumbnail": "https://i.ibb.co.com/PG4tVnzf/2151964669.jpg",
+    "category": "Digital Business",
+    "date": "2025-10-12",
+    "location": "BRAC Centre Inn, Dhaka",
+    "entry_fee": 650,
+    "description": "Learn how businesses are leveraging digital tools to scale faster and smarter."
+  }
+]
