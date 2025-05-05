@@ -17,6 +17,8 @@ import TermsAndCondition from './Components/Policy/TermsAndCondition.jsx';
 import ReturnPolicy from './Components/Policy/ReturnPolicy.jsx';
 import TermsAndService from './Components/Policy/TermsAndService.jsx';
 import Faq from './Components/Faq/Faq.jsx';
+import Login from './Components/Auth/Login.jsx';
+import Signup from './Components/Auth/Signup.jsx';
 
 
 const router = createBrowserRouter([
@@ -70,6 +72,14 @@ const router = createBrowserRouter([
      {
         path: '/faq',
         element: <Faq></Faq>
+      },
+      {
+        path: '/login',
+        element: <Login></Login>
+      }, 
+      {
+        path: '/signup',
+        element: <Signup></Signup>
       }
     ]
   }
