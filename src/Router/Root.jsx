@@ -5,6 +5,8 @@ import { Outlet } from 'react-router';
 import Slider from '../Components/Slider/Slider';
 import UpcomingEvent from '../Components/UpcomingEvent/UpcomingEvent';
 import Footer from '../Components/Footer/Footer';
+import WhyAttend from '../Components/WhyAttend/WhyAttend';
+import CustomerReview from '../Components/Custover Review/CustomerReview';
 
 const Root = () => {
     return (
@@ -16,6 +18,8 @@ const Root = () => {
             <main>
                 <section>
                     <UpcomingEvent></UpcomingEvent>
+                    <WhyAttend></WhyAttend>
+                    <CustomerReview></CustomerReview>
                 </section>
                 <Outlet></Outlet>
             </main>
