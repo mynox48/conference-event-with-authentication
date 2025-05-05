@@ -1,9 +1,12 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 
 const PrivacyPolicy = () => {
   return (
     <div className="w-11/12 mx-auto">
-      <h2 className="text-[#00a4ef] text-4xl font-bold my-10 text-center">Privacy Policy</h2>
+      <h2 className="text-[#00a4ef] text-4xl font-bold my-10 text-center">
+        Privacy Policy
+      </h2>
       <section class="bg-white p-8 rounded-lg  max-w-4xl mx-auto mt-10">
         <p class="text-sm text-gray-500 mb-6">Effective Date: May 2025</p>
 
@@ -77,6 +80,9 @@ const PrivacyPolicy = () => {
           for any such requests.
         </p>
       </section>
+      <Helmet>
+        <title>Policy | Privacy Policy </title>
+      </Helmet>
     </div>
   );
 };

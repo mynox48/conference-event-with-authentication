@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 
 const TermsAndCondition = () => {
   return (
@@ -66,6 +67,9 @@ const TermsAndCondition = () => {
           event without refund.
         </p>
       </section>
+      <Helmet>
+        <title>Policy | Terms & Condition </title>
+      </Helmet>
     </div>
   );
 };

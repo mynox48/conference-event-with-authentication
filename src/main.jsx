@@ -19,6 +19,7 @@ import TermsAndService from './Components/Policy/TermsAndService.jsx';
 import Faq from './Components/Faq/Faq.jsx';
 import Login from './Components/Auth/Login.jsx';
 import Signup from './Components/Auth/Signup.jsx';
+import { HelmetProvider } from 'react-helmet-async';
 
 
 const router = createBrowserRouter([
@@ -91,6 +92,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-      <RouterProvider router={router} />
+     <HelmetProvider>
+     <RouterProvider router={router} />
+     </HelmetProvider>
   </StrictMode>,
 )

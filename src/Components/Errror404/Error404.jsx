@@ -1,6 +1,7 @@
 import React from "react";
 import Error from "..//../assets/404.jpg";
 import { Link } from "react-router";
+import { Helmet } from "react-helmet-async";
 
 const Error404 = () => {
   return (
@@ -17,6 +18,9 @@ const Error404 = () => {
         {" "}
         Back to Home
       </Link>
+      <Helmet>
+        <title>Error 404 | Page Not Found</title>
+      </Helmet>
     </div>
   );
 };

@@ -8,6 +8,7 @@ import { Link } from "react-router";
 import { auth } from "../../Firebase/Firebase";
 import { ToastContainer, toast } from "react-toastify";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { Helmet } from "react-helmet-async";
 
 const Signup = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -180,6 +181,9 @@ const Signup = () => {
         </form>
       </div>
       <ToastContainer />
+      <Helmet>
+        <title>Sign Up | Conference Event </title>
+      </Helmet>
     </div>
   );
 };

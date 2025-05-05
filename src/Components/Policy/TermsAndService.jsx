@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 
 const TermsAndService = () => {
   return (
@@ -69,6 +70,9 @@ const TermsAndService = () => {
           arising from your use of the website or participation in our events.
         </p>
       </section>
+      <Helmet>
+        <title>Policy | Terms & Service </title>
+      </Helmet>
     </div>
   );
 };
