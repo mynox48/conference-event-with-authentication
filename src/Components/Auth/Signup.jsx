@@ -24,7 +24,7 @@ const Signup = () => {
     createUserWithEmailAndPassword(auth, email, password)
       .then((result) => {
         console.log(result);
-        toast.success("Signup successful! 🎉");
+        toast.success("Sign up successful! 🎉");
       })
       .catch((error) => {
         if (!/[A-Z]/.test(password)) {
@@ -48,9 +48,11 @@ const Signup = () => {
     signInWithPopup(auth, provider)
       .then((result) => {
         console.log(result);
+        toast.success("Sign up successful! 🎉");
       })
       .catch((error) => {
         console.log(error);
+        toast.error(error.message);
       });
   };
 
@@ -161,7 +163,7 @@ const Signup = () => {
 
                 <button
                   onClick={() => setShowPassword(!showPassword)}
-                  className="btn btn-sm absolute top-1 right-2"
+                  className="btn btn-sm bg-base-100 border-0 absolute top-1 right-2"
                 >
                   {" "}
                   {showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>}
