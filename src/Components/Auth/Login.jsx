@@ -4,12 +4,16 @@ import {
   signInWithPopup,
 } from "firebase/auth";
 import React from "react";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import { auth } from "../../Firebase/Firebase";
 import { ToastContainer, toast } from "react-toastify";
 import { Helmet } from "react-helmet-async";
 
+
+
+
 const Login = () => {
+  const navigate = useNavigate();
   const handleSignInWithEmail = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
@@ -18,6 +22,7 @@ const Login = () => {
       .then((result) => {
         console.log(result);
         toast.success("Sign in successful! 🎉");
+        navigate('/')
       })
       .catch((error) => {
         toast.error(error.message);
@@ -31,6 +36,7 @@ const Login = () => {
       .then((result) => {
         console.log(result);
         toast.success("Sign in successful! 🎉");
+        navigate('/')
       })
       .catch((error) => {
         console.log(error);

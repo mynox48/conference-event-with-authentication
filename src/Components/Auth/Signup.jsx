@@ -1,30 +1,35 @@
 import {
-  createUserWithEmailAndPassword,
   GoogleAuthProvider,
   signInWithPopup,
 } from "firebase/auth";
-import React, { useState } from "react";
+import React, { use, useState } from "react";
 import { Link } from "react-router";
 import { auth } from "../../Firebase/Firebase";
 import { ToastContainer, toast } from "react-toastify";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Helmet } from "react-helmet-async";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const Signup = () => {
   const [showPassword, setShowPassword] = useState(false);
 
-  //  Email with password Auth
+  const {createUser, setUser} = use (AuthContext)
 
+
+  //  Email with password Auth
   const handleSignUp = (e) => {
     e.preventDefault();
     const name = e.target.name.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
-    console.log(name, email, password);
+    const photourl = e.target.photourl.value;
+    console.log(name, email, password, photourl);
 
-    createUserWithEmailAndPassword(auth, email, password)
+    createUser ( email, password)
       .then((result) => {
-        console.log(result);
+        console.log(result.user);
+        const user = result.user;
+        setUser(user);
         toast.success("Sign up successful! 🎉");
       })
       .catch((error) => {

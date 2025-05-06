@@ -1,62 +1,74 @@
 [
   {
-    "id": "event_001",
+    "id": "001",
+    "category_id": 1,
     "name": "Tech Innovators Conference 2025",
     "thumbnail": "https://i.ibb.co.com/TxfxFGr0/2149126949.jpg",
     "category": "Technology",
     "date": "2025-05-15",
     "location": "Dhaka Convention Center, Dhaka",
     "entry_fee": 500,
-    "description": "An exclusive gathering of tech leaders and innovators from around the world."
+    "description": "An exclusive gathering of tech leaders and innovators from around the world.",
+    "detailed_description": "The Tech Innovators Conference 2025 brings together the brightest minds in technology and innovation at the heart of Dhaka. This full-day conference will showcase leading-edge technologies, revolutionary ideas, and breakthrough solutions that are shaping the future. Whether you are a startup founder, a developer, a researcher, or a corporate decision-maker, this event will open new doors to collaboration, funding, and strategy development.\n\nSessions include keynote addresses from international thought leaders, technical workshops, case study presentations, and investor pitch segments. Explore topics such as AI for good, digital governance, next-gen mobile networks, and smart device ecosystems. The conference also hosts a live demo area where attendees can interact with prototypes and beta launches of future technologies.\n\nThis event is not only a knowledge-sharing platform but also a networking powerhouse, with dedicated spaces for one-on-one meetings, panel discussions, and industry matchmaking. Early registrants will receive a digital event kit and access to exclusive online content. Whether you're looking to scale a solution or gain insights into the next big thing in tech, this conference is your gateway to global innovation."
   },
   {
-    "id": "event_002",
+    "id": "002",
+    "category_id": 2,
     "name": "AI & Machine Learning Summit",
     "thumbnail": "https://i.ibb.co.com/WvcRXg2c/2151003702.jpg",
     "category": "Artificial Intelligence",
     "date": "2025-06-10",
     "location": "Hotel InterContinental, Dhaka",
     "entry_fee": 750,
-    "description": "Explore cutting-edge AI solutions and real-world applications in diverse industries."
+    "description": "Explore cutting-edge AI solutions and real-world applications in diverse industries.",
+    "detailed_description": "The AI & Machine Learning Summit 2025 is a premier event for researchers, developers, data scientists, and decision-makers eager to stay ahead in the rapidly evolving field of artificial intelligence. Held in the luxury setting of Hotel InterContinental Dhaka, the summit is a knowledge-intensive experience where theoretical foundations meet real-world applications.\n\nParticipants will engage with industry experts on topics such as deep learning, computer vision, neural networks, natural language processing, and ethical AI. The summit will offer live coding sessions, model optimization labs, and AI startup pitch decks. You’ll gain insights into how machine learning is transforming industries such as healthcare, finance, agriculture, retail, and cybersecurity.\n\nBeyond the talks and workshops, the event provides a unique networking arena for academia and business to meet, brainstorm, and co-create. Investors and tech accelerators will also be present, offering invaluable opportunities to scale AI-driven solutions. A special session is dedicated to women in AI, spotlighting their contributions and encouraging diversity in the field. This summit is your launchpad into the future of intelligent systems."
   },
   {
-    "id": "event_003",
+    "id": "003",
+    "category_id": 3,
     "name": "Future of Web 3.0 Expo",
     "thumbnail": "https://i.ibb.co.com/ycw5fJyN/2848.jpg",
     "category": "Blockchain",
     "date": "2025-07-20",
     "location": "Sylhet Tech Park, Sylhet",
     "entry_fee": 600,
-    "description": "Discover the innovations driving the decentralized web and next-gen internet."
+    "description": "Discover the innovations driving the decentralized web and next-gen internet.",
+    "detailed_description": "Join the revolution at the Future of Web 3.0 Expo 2025, a game-changing event dedicated to blockchain, decentralized applications (dApps), smart contracts, and the next iteration of the internet. Hosted in the newly launched Sylhet Tech Park, the event is designed to demystify and demonstrate the practical impacts of Web 3.0 technologies on both the digital economy and everyday life.\n\nExpect deep dives into DeFi (Decentralized Finance), DAOs (Decentralized Autonomous Organizations), crypto governance, NFT ecosystems, and blockchain interoperability. Industry pioneers and early adopters will share success stories and practical challenges of building on the decentralized web. Exhibitors will showcase innovative blockchain-based tools across real estate, healthcare, education, and logistics.\n\nParticipants will be able to interact with metaverse applications, take part in blockchain hackathons, and attend virtual land auctions. This Expo is perfect for developers, crypto investors, policymakers, and entrepreneurs looking to prepare for a decentralized future. A special “Web 3.0 for Startups” panel will address how small businesses can leverage blockchain to reduce costs, enhance transparency, and reach global markets."
   },
   {
-    "id": "event_004",
+    "id": "004",
+    "category_id": 4,
     "name": "Cybersecurity Conclave 2025",
     "thumbnail": "https://i.ibb.co.com/6RSy86cL/77676.jpg",
     "category": "Cybersecurity",
     "date": "2025-08-05",
     "location": "Pan Pacific Sonargaon, Dhaka",
     "entry_fee": 550,
-    "description": "Stay ahead of cyber threats with expert sessions on modern defense strategies."
+    "description": "Stay ahead of cyber threats with expert sessions on modern defense strategies.",
+    "detailed_description": "The Cybersecurity Conclave 2025 is Bangladesh’s premier gathering of information security professionals, government regulators, ethical hackers, and tech-savvy executives. Taking place at Pan Pacific Sonargaon, this event is your frontline defense against the rising tide of cyber threats in the digital age.\n\nThe conference focuses on protecting critical infrastructure, securing cloud environments, building resilient systems, and developing national strategies for digital defense. Attendees will learn about zero-trust architecture, real-time threat detection, incident response planning, and cybersecurity regulations affecting both private and public sectors.\n\nInternational experts from leading cybersecurity firms will conduct live breach simulations, ethical hacking workshops, and forensic analysis sessions. Special attention will be given to cybersecurity in fintech, e-commerce, and digital banking. Attendees can also participate in certification mini-courses hosted by global institutions.\n\nThis conclave is essential for IT managers, C-suite leaders, software developers, and policymakers who wish to stay proactive in the war against cybercrime. The event wraps up with a panel on emerging threats posed by AI and quantum computing in the cyber realm."
   },
   {
-    "id": "event_005",
+    "id": "005",
+    "category_id": 5,
     "name": "Startup Bangladesh Tech Fest",
     "thumbnail": "https://i.ibb.co.com/84RfwMLK/2816.jpg",
     "category": "Startups",
     "date": "2025-09-18",
     "location": "Innovation Hub, Khulna",
     "entry_fee": 300,
-    "description": "Connect with early-stage startups, investors, and mentors shaping Bangladesh’s tech future."
+    "description": "Connect with early-stage startups, investors, and mentors shaping Bangladesh’s tech future.",
+    "detailed_description": "Startup Bangladesh Tech Fest 2025 is a high-energy, action-packed event focused on accelerating the local innovation ecosystem. Designed specifically for early-stage tech startups and entrepreneurs, this festival at the Innovation Hub in Khulna connects creators, coders, mentors, and investors from across the nation.\n\nThis year’s fest includes a startup pitch arena, founder storytelling sessions, VC speed dating, and incubation program exhibitions. More than 100 startups from various sectors including edtech, healthtech, agritech, and e-commerce will showcase their products and services to potential partners and investors.\n\nAttendees will gain firsthand knowledge of launching, scaling, and funding a startup in Bangladesh. Sessions will cover business model validation, MVP building, market research, product development, and founder wellness. The fest is designed to be interactive, featuring open mic segments, hands-on workshops, and startup awards.\n\nWhether you're a student with an idea, a founder looking for funding, or an investor scouting the next unicorn, this is the place to be. Enjoy a vibrant environment full of creativity, energy, and entrepreneurial spirit, all focused on shaping the digital economy of tomorrow."
   },
   {
-    "id": "event_006",
+    "id": "006",
+    "category_id": 6,
     "name": "Digital Transformation Summit",
     "thumbnail": "https://i.ibb.co.com/PG4tVnzf/2151964669.jpg",
     "category": "Digital Business",
     "date": "2025-10-12",
     "location": "BRAC Centre Inn, Dhaka",
     "entry_fee": 650,
-    "description": "Learn how businesses are leveraging digital tools to scale faster and smarter."
+    "description": "Learn how businesses are leveraging digital tools to scale faster and smarter.",
+    "detailed_description": "The Digital Transformation Summit 2025 explores how businesses, regardless of size or sector, can embrace digital innovation to remain competitive and customer-centric. Taking place at the BRAC Centre Inn in Dhaka, this summit is designed for business leaders, IT professionals, marketers, and entrepreneurs eager to reimagine their operational models.\n\nThe summit features sessions on ERP modernization, digital customer journeys, e-commerce strategy, automation in HR and finance, and data-driven decision-making. Industry leaders will share how they digitized legacy systems, implemented CRM platforms, adopted AI-driven insights, and built agile, cloud-native organizations.\n\nIn addition to business case presentations, the event includes a solutions showcase where digital service providers offer consultations and demo their tools. A key highlight will be the CxO Roundtable — an exclusive dialogue between CEOs and CIOs from Bangladesh's top enterprises discussing digital resilience and transformation roadmaps.\n\nAttendees will leave with an actionable blueprint for transforming their organizations to meet evolving market demands. The event closes with a networking cocktail, where participants can connect with solution partners and transformation consultants to jumpstart their next project."
   }
 ]

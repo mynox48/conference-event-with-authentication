@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { use } from 'react';
 import { Link, NavLink } from 'react-router';
 import './Navbar.css'
+import  { AuthContext } from '../../Provider/AuthProvider';
+import { ToastContainer, toast } from "react-toastify";
 
 const Navbar = () => {
     const links = <>
@@ -9,6 +11,19 @@ const Navbar = () => {
     <li> <NavLink className='mr-6' to='/faq'>Faq</NavLink> </li>
     <li> <NavLink  to='/contact-us'>Contact Us</NavLink> </li>
     </>
+
+    const {user, logOut} = use(AuthContext);
+
+    const handleLogOut = () => {
+      logOut()
+      .then (() => {
+          toast.success("You Logged Out successful! 🎉");
+      }).catch ((error) => {
+        toast.error(error);
+      })
+    }
+
+
     return (
         <div className="navbar bg-base-100  w-11/12 mx-auto">
   <div className="navbar-start">
@@ -24,7 +39,7 @@ const Navbar = () => {
 
       </ul>
     </div>
-    <Link to='/'><h2 className='text-2xl font-bold'><span className='text-[#00a4ef]'>C</span>onference <span className='text-[#00a4ef]'>E</span>vent</h2></Link>
+    <Link to='/'><h2 className='text xl lg:text-2xl font-bold'><span className='text-[#00a4ef]'>C</span>onference <span className='text-[#00a4ef]'>E</span>vent</h2></Link>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
@@ -34,8 +49,16 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end">
-    <Link to='/login' className="btn btn-md bg-[#00a4ef] text-white hover:bg-base-300 hover:text-black hover:border-0">Login</Link>
+    {/* <p> {user && user.email} </p> */}
+      <img title={user && user.displayName} className='w-12 rounded-full mr-4' src={user && user.photoURL} alt="" />
+
+{
+  user ? <button onClick={handleLogOut} className="btn btn-md bg-[#00a4ef] text-white hover:bg-base-300 hover:text-black hover:border-0">Sign Out</button> :  <Link to='/login' className="btn btn-md bg-[#00a4ef] text-white hover:bg-base-300 hover:text-black hover:border-0">Login</Link>
+}
+    
   </div>
+
+  <ToastContainer></ToastContainer>
 </div>
     );
 };
