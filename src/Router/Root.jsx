@@ -21,7 +21,7 @@ const Root = () => {
                     <WhyAttend></WhyAttend>
                     <CustomerReview></CustomerReview>
                 </section>
-                <Outlet></Outlet>
+             
             </main>
             <footer>
                 <Footer></Footer>
@@ -31,3 +31,5 @@ const Root = () => {
 };
 
 export default Root;
+
+

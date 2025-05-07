@@ -37,7 +37,7 @@ export default function App() {
         }}
         pagination={true}
         modules={[EffectCoverflow, Pagination]}
-        className="mySwiper"
+        className="mySwiper bg-[#eee]"
       >
         <SwiperSlide>
           <img src={Event1} />

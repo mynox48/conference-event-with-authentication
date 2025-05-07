@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLoaderData, useParams } from 'react-router';
+import Swal from 'sweetalert2';
 
 const EventDetails = () => {
     const data = useLoaderData();
@@ -12,6 +13,32 @@ const EventDetails = () => {
         const eventDetails = data.find((singleEvent) => singleEvent.id == id)
         setEvent(eventDetails)
     }, [data, id])
+
+
+    const handleReserveButton = (e) => {
+        e.preventDefault()
+
+        const name = e.target.email.value 
+        const password = e.target.password.value
+        
+        if(!name == '' || password == ''){
+            Swal.fire({
+                      title: "Reserved successful! 🎉",
+                      icon: "success",
+                      draggable: true
+                    });
+                    
+        }
+        else{
+            alert('Please Fill in the blank')
+        }
+
+
+    }
+
+
+
+
     return (
         <div className='w-11/12 mx-auto my-10'>
             <div className="rounded-lg overflow-hidden bg-white">
@@ -31,6 +58,25 @@ const EventDetails = () => {
         </div>
       </div>
     </div>
+
+
+    <div className='flex flex-col justify-center items-center space-y-3'>
+        <h2 className='text-3xl font-bold text-center text-[#00a4ef]'>Reserve Your Seat</h2>
+    <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+      <div className="card-body">
+        <form onSubmit={handleReserveButton} className="fieldset">
+          <label className="label">Email</label>
+          <input type="email" name='email' className="input" placeholder="Email" />
+          <label className="label">Password</label>
+          <input type="password" name='password' className="input" placeholder="Password" />
+          <button type='submit' className="btn text-white bg-[#00a4ef] mt-4 hover:bg-base-300 hover:text-black hover:border-0">Reserve seat</button>
+        </form>
+      </div>
+    </div>
+      </div>
+
+
+
         </div>
     );
 };

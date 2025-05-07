@@ -21,6 +21,8 @@ const SingleData = ({ event }) => {
           </Link>
         </div>
       </div>
+
+
     </div>
   );
 };

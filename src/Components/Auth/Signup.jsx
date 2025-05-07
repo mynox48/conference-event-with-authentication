@@ -3,19 +3,20 @@ import {
   signInWithPopup,
 } from "firebase/auth";
 import React, { use, useState } from "react";
-import { Link } from "react-router";
+import { Link, Navigate, useNavigate } from "react-router";
 import { auth } from "../../Firebase/Firebase";
 import { ToastContainer, toast } from "react-toastify";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Helmet } from "react-helmet-async";
 import { AuthContext } from "../../Provider/AuthProvider";
+import Swal from "sweetalert2";
 
 const Signup = () => {
   const [showPassword, setShowPassword] = useState(false);
 
   const {createUser, setUser} = use (AuthContext)
 
-
+  const navigate = useNavigate()
   //  Email with password Auth
   const handleSignUp = (e) => {
     e.preventDefault();
@@ -30,10 +31,19 @@ const Signup = () => {
         console.log(result.user);
         const user = result.user;
         setUser(user);
-        toast.success("Sign up successful! 🎉");
+         Swal.fire({
+                  title: "Sign Up successful! 🎉",
+                  icon: "success",
+                  draggable: true
+                });
+        navigate('/')
       })
       .catch((error) => {
-        if (!/[A-Z]/.test(password)) {
+
+        if (name == '' || email == '' || password =='' || photourl == '') {
+          toast.error("Please fill in the blank");
+        }
+        else if (!/[A-Z]/.test(password)) {
           toast.error("Must type at least one UpperCase Letter");
           return;
         } else if (!/[a-z]/.test(password)) {
@@ -42,7 +52,9 @@ const Signup = () => {
         } else if (!/[0-9]/.test(password)) {
           toast.error("Must type at least one Number");
           return;
-        } else {
+        } 
+        
+        else {
           toast.error(error.message);
         }
       });
@@ -54,7 +66,12 @@ const Signup = () => {
     signInWithPopup(auth, provider)
       .then((result) => {
         console.log(result);
-        toast.success("Sign up successful! 🎉");
+        Swal.fire({
+          title: "Sign Up successful! 🎉",
+          icon: "success",
+          draggable: true
+        });
+        navigate('/')
       })
       .catch((error) => {
         console.log(error);

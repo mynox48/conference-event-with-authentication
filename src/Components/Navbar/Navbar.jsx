@@ -9,7 +9,7 @@ const Navbar = () => {
     <li> <NavLink className='mr-6' to='/'>Home</NavLink> </li>
     <li> <NavLink className='mr-6' to='/about'>About</NavLink> </li>
     <li> <NavLink className='mr-6' to='/faq'>Faq</NavLink> </li>
-    <li> <NavLink  to='/contact-us'>Contact Us</NavLink> </li>
+    <li> <NavLink className='mr-6' to='/contact-us'>Contact Us</NavLink> </li>
     </>
 
     const {user, logOut} = use(AuthContext);
@@ -18,6 +18,7 @@ const Navbar = () => {
       logOut()
       .then (() => {
           toast.success("You Logged Out successful! 🎉");
+  
       }).catch ((error) => {
         toast.error(error);
       })
@@ -25,7 +26,8 @@ const Navbar = () => {
 
 
     return (
-        <div className="navbar bg-base-100  w-11/12 mx-auto">
+       <div className='bg-base-100'>
+         <div className="navbar w-11/12 mx-auto  ">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -36,6 +38,9 @@ const Navbar = () => {
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
        
        {links}
+       {
+  user ? <div><li> <NavLink className='mr-6' to='/teams'> Teams </NavLink> </li></div> : ''
+}
 
       </ul>
     </div>
@@ -46,17 +51,22 @@ const Navbar = () => {
      
         {links}
 
-      {
-        user?<li> <NavLink className='mr-6' to='/teams'>Teams</NavLink> </li>:<Navigate to='/login'></Navigate>
-      }
+        {
+  user ? <div><li> <NavLink className='mr-6' to='/teams'> Teams </NavLink> </li></div> : ''
+}
 
     </ul>
   </div>
   <div className="navbar-end">
-    {/* <p> {user && user.email} </p> */}
+
       <img title={user && user.displayName} className='w-12 rounded-full mr-4' src={user && user.photoURL} alt="" />
 
-{
+
+  {
+    user && <Link to='/my-profile' className="btn btn-md bg-[#00a4ef] text-white hover:bg-base-300 hover:text-black hover:border-0 mr-5">My Profile</Link>
+  }
+
+{     
   user ? <button onClick={handleLogOut} className="btn btn-md bg-[#00a4ef] text-white hover:bg-base-300 hover:text-black hover:border-0">Sign Out</button> :  <Link to='/login' className="btn btn-md bg-[#00a4ef] text-white hover:bg-base-300 hover:text-black hover:border-0">Login</Link>
 }
     
@@ -64,6 +74,7 @@ const Navbar = () => {
 
   <ToastContainer></ToastContainer>
 </div>
+       </div>
     );
 };
 

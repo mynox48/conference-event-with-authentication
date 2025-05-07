@@ -11,7 +11,7 @@ const WhyAttend = () => {
                 Unlock new insights, build valuable connections, and gain a fresh perspective that can  <br />accelerate your professional growth.
                 </p>
             </div>
-            <section className="bg-base-200 dark:bg-gray-100 dark:text-gray-800">
+            <section className="bg-base-200 dark:bg-gray-100 dark:text-gray-800 rounded-xl">
 	<div className="container flex flex-col-reverse mx-auto lg:flex-row">
 		<div className="flex flex-col px-6 py-8 space-y-6 rounded-sm sm:p-8 lg:p-12 lg:w-1/2 xl:w-2/5 dark:bg-default-600 dark:text-gray-50">
 			<div className="flex space-x-2 sm:space-x-4 bg-base-100 p-4 rounded-xl shadow-sm">

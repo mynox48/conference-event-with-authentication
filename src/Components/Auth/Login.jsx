@@ -8,6 +8,7 @@ import { Link, useNavigate } from "react-router";
 import { auth } from "../../Firebase/Firebase";
 import { ToastContainer, toast } from "react-toastify";
 import { Helmet } from "react-helmet-async";
+import Swal from "sweetalert2";
 
 
 
@@ -21,7 +22,11 @@ const Login = () => {
     signInWithEmailAndPassword(auth, email, password)
       .then((result) => {
         console.log(result);
-        toast.success("Sign in successful! 🎉");
+        Swal.fire({
+          title: "Sign in successful! 🎉",
+          icon: "success",
+          draggable: true
+        });
         navigate('/')
       })
       .catch((error) => {
@@ -35,7 +40,12 @@ const Login = () => {
     signInWithPopup(auth, provider)
       .then((result) => {
         console.log(result);
-        toast.success("Sign in successful! 🎉");
+        // toast.success("Sign in successful! 🎉");
+        Swal.fire({
+          title: "Sign in successful! 🎉",
+          icon: "success",
+          draggable: true
+        });
         navigate('/')
       })
       .catch((error) => {

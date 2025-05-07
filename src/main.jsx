@@ -1,8 +1,9 @@
-import { StrictMode } from "react";
+import { StrictMode, useContext } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
-import App from "./App.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router";
+import { HelmetProvider } from "react-helmet-async";
+import AuthProvider, { AuthContext } from "./Provider/AuthProvider";
 import Root from "./Router/Root.jsx";
 import Home from "./Components/Home/Home.jsx";
 import About from "./Components/About/About.jsx";
@@ -16,10 +17,12 @@ import TermsAndService from "./Components/Policy/TermsAndService.jsx";
 import Faq from "./Components/Faq/Faq.jsx";
 import Login from "./Components/Auth/Login.jsx";
 import Signup from "./Components/Auth/Signup.jsx";
-import { HelmetProvider } from "react-helmet-async";
-import AuthProvider from "./Provider/AuthProvider.jsx";
 import EventDetails from "./Components/Event Details/EventDetails.jsx";
 import Teams from "./Components/Teams/Teams.jsx";
+import PrivateRoute from "./PrivateRoute/PrivateRoute.jsx";
+import "./index.css"; 
+import MyProfile from "./Components/MyProfile/MyProfile.jsx";
+
 
 const router = createBrowserRouter([
   {
@@ -33,13 +36,10 @@ const router = createBrowserRouter([
       },
     ],
   },
-
   {
     path: "*",
     element: <Error404></Error404>,
   },
-
-  // CoRoot for footer
   {
     path: "/",
     element: <CoRoot></CoRoot>,
@@ -82,22 +82,42 @@ const router = createBrowserRouter([
       },
       {
         path: '/event-details/:id',
-        element: <EventDetails></EventDetails>,
+        element: <PrivateRoute><EventDetails></EventDetails></PrivateRoute>,
         loader: () => fetch("/event.json"),
       },
       {
         path: '/teams',
-        element: <Teams></Teams>
+        element: <PrivateRoute><Teams></Teams></PrivateRoute>,
+      },
+      {
+        path: '/my-profile',
+        element: <PrivateRoute><MyProfile></MyProfile></PrivateRoute> 
       }
     ],
   },
 ]);
 
+// Main App Component
+function App() {
+  const { loading } = useContext(AuthContext);
+
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center h-screen">
+        <span className="loading loading-dots loading-lg"></span>
+      </div>
+    );
+  }
+
+  return <RouterProvider router={router} />;
+}
+
+// Rendering the App
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <HelmetProvider>
       <AuthProvider>
-        <RouterProvider router={router} />
+        <App />
       </AuthProvider>
     </HelmetProvider>
   </StrictMode>

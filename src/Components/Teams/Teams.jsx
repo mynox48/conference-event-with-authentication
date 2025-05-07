@@ -5,11 +5,12 @@ import Teams3 from "..//..//assets/teams (3).jpg";
 import Teams4 from "..//..//assets/teams (4).jpg";
 import Teams5 from "..//..//assets/teams (5).jpg";
 import Teams6 from "..//..//assets/teams (6).jpg";
+import { Helmet } from "react-helmet-async";
 
 const Teams = () => {
   return (
     <div className="w-11/12 mx-auto my-15">
-      <section className="py-6 bg-gray-100 text-gray-800">
+      <section className="py-6 rounded-xl bg-gray-100 text-gray-800">
         <div className="container flex flex-col items-center justify-center p-4 mx-auto sm:p-10">
           <p className="p-2 text-sm font-medium tracking-wider text-center uppercase">
             Development team
@@ -505,6 +506,9 @@ const Teams = () => {
           </div>
         </div>
       </section>
+   <Helmet>
+    <title>Teams | Conference Event</title>
+   </Helmet>
     </div>
   );
 };
