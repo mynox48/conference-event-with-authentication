@@ -1,5 +1,5 @@
 import React, { use } from 'react';
-import { Link, NavLink } from 'react-router';
+import { Link, Navigate, NavLink } from 'react-router';
 import './Navbar.css'
 import  { AuthContext } from '../../Provider/AuthProvider';
 import { ToastContainer, toast } from "react-toastify";
@@ -45,6 +45,10 @@ const Navbar = () => {
     <ul className="menu menu-horizontal px-1">
      
         {links}
+
+      {
+        user?<li> <NavLink className='mr-6' to='/teams'>Teams</NavLink> </li>:<Navigate to='/login'></Navigate>
+      }
 
     </ul>
   </div>

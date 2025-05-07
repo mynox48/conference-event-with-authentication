@@ -16,7 +16,7 @@ const EventDetails = () => {
         <div className='w-11/12 mx-auto my-10'>
             <div className="rounded-lg overflow-hidden bg-white">
       <img
-        className="w-full h-[500px] rounded-2xl "
+        className="w-full h-[250px] lg:h-[500px] rounded-2xl "
         src={event?.thumbnail}
       />
       <div className="mt-8 p-4">

@@ -1,46 +1,73 @@
-import React from "react";
-import CofarenceImg1 from "..//../assets/confarence_img_1.jpg";
-import CofarenceImg2 from "..//../assets/confarence_img_2.jpg";
-import CofarenceImg3 from "..//../assets/confarence_img_3.jpg";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+import Event1 from '..//..//assets/event (1).jpg'
+import Event2 from '..//..//assets/event (2).jpg'
+import Event3 from '..//..//assets/event (3).jpg'
+import Event4 from '..//..//assets/event (4).jpg'
+import Event5 from '..//..//assets/event (5).jpg'
+import Event6 from '..//..//assets/event (6).jpg'
+import Event7 from '..//..//assets/event (7).jpg'
+import Event8 from '..//..//assets/event (8).jpg'
+import Event9 from '..//..//assets/event (9).jpg'
 
-const Slider = () => {
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
+
+import './styles.css';
+
+// import required modules
+import { EffectCoverflow, Pagination } from 'swiper/modules';
+
+export default function App() {
   return (
-    <div className="carousel w-full">
-      <div id="slide1" className="carousel-item relative w-full">
-        <img src={CofarenceImg1} className="w-full h-[55%]" />
-        <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-          <a href="#slide3" className="btn btn-circle">
-            ❮
-          </a>
-          <a href="#slide2" className="btn btn-circle">
-            ❯
-          </a>
-        </div>
-      </div>
-      <div id="slide2" className="carousel-item relative w-full">
-        <img src={CofarenceImg2} className="w-full h-[55%]" />
-        <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-          <a href="#slide1" className="btn btn-circle">
-            ❮
-          </a>
-          <a href="#slide3" className="btn btn-circle">
-            ❯
-          </a>
-        </div>
-      </div>
-      <div id="slide3" className="carousel-item relative w-full">
-        <img src={CofarenceImg3} className="w-full h-[55%]" />
-        <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-          <a href="#slide2" className="btn btn-circle">
-            ❮
-          </a>
-          <a href="#slide1" className="btn btn-circle">
-            ❯
-          </a>
-        </div>
-      </div>
-    </div>
+    <>
+      <Swiper
+        effect={'coverflow'}
+        grabCursor={true}
+        centeredSlides={true}
+        slidesPerView={'auto'}
+        coverflowEffect={{
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        }}
+        pagination={true}
+        modules={[EffectCoverflow, Pagination]}
+        className="mySwiper"
+      >
+        <SwiperSlide>
+          <img src={Event1} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={Event2} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={Event3} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={Event4} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={Event5} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={Event6} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={Event7} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={Event8} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={Event9} />
+        </SwiperSlide>
+  
+      </Swiper>
+    </>
   );
-};
-
-export default Slider;
+}

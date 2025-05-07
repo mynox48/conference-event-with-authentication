@@ -19,6 +19,7 @@ import Signup from "./Components/Auth/Signup.jsx";
 import { HelmetProvider } from "react-helmet-async";
 import AuthProvider from "./Provider/AuthProvider.jsx";
 import EventDetails from "./Components/Event Details/EventDetails.jsx";
+import Teams from "./Components/Teams/Teams.jsx";
 
 const router = createBrowserRouter([
   {
@@ -83,6 +84,10 @@ const router = createBrowserRouter([
         path: '/event-details/:id',
         element: <EventDetails></EventDetails>,
         loader: () => fetch("/event.json"),
+      },
+      {
+        path: '/teams',
+        element: <Teams></Teams>
       }
     ],
   },
