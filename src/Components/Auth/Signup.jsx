@@ -1,7 +1,4 @@
-import {
-  GoogleAuthProvider,
-  signInWithPopup,
-} from "firebase/auth";
+import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import React, { use, useState } from "react";
 import { Link, Navigate, useNavigate } from "react-router";
 import { auth } from "../../Firebase/Firebase";
@@ -14,9 +11,9 @@ import Swal from "sweetalert2";
 const Signup = () => {
   const [showPassword, setShowPassword] = useState(false);
 
-  const {createUser, setUser} = use (AuthContext)
+  const { createUser, setUser } = use(AuthContext);
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   //  Email with password Auth
   const handleSignUp = (e) => {
     e.preventDefault();
@@ -26,24 +23,22 @@ const Signup = () => {
     const photourl = e.target.photourl.value;
     console.log(name, email, password, photourl);
 
-    createUser ( email, password)
+    createUser(email, password)
       .then((result) => {
         console.log(result.user);
         const user = result.user;
         setUser(user);
-         Swal.fire({
-                  title: "Sign Up successful! 🎉",
-                  icon: "success",
-                  draggable: true
-                });
-        navigate('/')
+        Swal.fire({
+          title: "Sign Up successful! 🎉",
+          icon: "success",
+          draggable: true,
+        });
+        navigate("/");
       })
       .catch((error) => {
-
-        if (name == '' || email == '' || password =='' || photourl == '') {
+        if (name == "" || email == "" || password == "" || photourl == "") {
           toast.error("Please fill in the blank");
-        }
-        else if (!/[A-Z]/.test(password)) {
+        } else if (!/[A-Z]/.test(password)) {
           toast.error("Must type at least one UpperCase Letter");
           return;
         } else if (!/[a-z]/.test(password)) {
@@ -52,9 +47,7 @@ const Signup = () => {
         } else if (!/[0-9]/.test(password)) {
           toast.error("Must type at least one Number");
           return;
-        } 
-        
-        else {
+        } else {
           toast.error(error.message);
         }
       });
@@ -69,9 +62,9 @@ const Signup = () => {
         Swal.fire({
           title: "Sign Up successful! 🎉",
           icon: "success",
-          draggable: true
+          draggable: true,
         });
-        navigate('/')
+        navigate("/");
       })
       .catch((error) => {
         console.log(error);

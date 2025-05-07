@@ -506,9 +506,9 @@ const Teams = () => {
           </div>
         </div>
       </section>
-   <Helmet>
-    <title>Teams | Conference Event</title>
-   </Helmet>
+      <Helmet>
+        <title>Teams | Conference Event</title>
+      </Helmet>
     </div>
   );
 };

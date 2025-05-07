@@ -1,19 +1,18 @@
 import {
   GoogleAuthProvider,
+  sendPasswordResetEmail,
   signInWithEmailAndPassword,
   signInWithPopup,
 } from "firebase/auth";
-import React from "react";
+import React, { useRef } from "react";
 import { Link, useNavigate } from "react-router";
 import { auth } from "../../Firebase/Firebase";
 import { ToastContainer, toast } from "react-toastify";
 import { Helmet } from "react-helmet-async";
 import Swal from "sweetalert2";
 
-
-
-
 const Login = () => {
+  const emailRef = useRef();
   const navigate = useNavigate();
   const handleSignInWithEmail = (e) => {
     e.preventDefault();
@@ -25,9 +24,9 @@ const Login = () => {
         Swal.fire({
           title: "Sign in successful! 🎉",
           icon: "success",
-          draggable: true
+          draggable: true,
         });
-        navigate('/')
+        navigate("/");
       })
       .catch((error) => {
         toast.error(error.message);
@@ -44,13 +43,29 @@ const Login = () => {
         Swal.fire({
           title: "Sign in successful! 🎉",
           icon: "success",
-          draggable: true
+          draggable: true,
         });
-        navigate('/')
+        navigate("/");
       })
       .catch((error) => {
         console.log(error);
         toast.error(error.message);
+      });
+  };
+
+  const handleForgetPassword = () => {
+    const email = emailRef.current.value;
+
+    sendPasswordResetEmail(auth, email)
+      .then(() => {
+        Swal.fire({
+          title: "Already Send A Email. Please Check",
+          icon: "success",
+          draggable: true,
+        });
+      })
+      .catch((error) => {
+        console.log(error);
       });
   };
 
@@ -108,6 +123,7 @@ const Login = () => {
                 type="email"
                 name="email"
                 id="email"
+                ref={emailRef}
                 placeholder="leroy@jenkins.com"
                 className="w-full px-3 py-2 border rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"
               />
@@ -120,6 +136,7 @@ const Login = () => {
                 <a
                   rel="noopener noreferrer"
                   href="#"
+                  onClick={handleForgetPassword}
                   className="text-xs hover:underline dark:text-gray-600"
                 >
                   Forgot password?

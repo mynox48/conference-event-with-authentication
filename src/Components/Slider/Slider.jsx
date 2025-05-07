@@ -1,33 +1,33 @@
 // Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
-import Event1 from '..//..//assets/event (1).jpg'
-import Event2 from '..//..//assets/event (2).jpg'
-import Event3 from '..//..//assets/event (3).jpg'
-import Event4 from '..//..//assets/event (4).jpg'
-import Event5 from '..//..//assets/event (5).jpg'
-import Event6 from '..//..//assets/event (6).jpg'
-import Event7 from '..//..//assets/event (7).jpg'
-import Event8 from '..//..//assets/event (8).jpg'
-import Event9 from '..//..//assets/event (9).jpg'
+import { Swiper, SwiperSlide } from "swiper/react";
+import Event1 from "..//..//assets/event (1).jpg";
+import Event2 from "..//..//assets/event (2).jpg";
+import Event3 from "..//..//assets/event (3).jpg";
+import Event4 from "..//..//assets/event (4).jpg";
+import Event5 from "..//..//assets/event (5).jpg";
+import Event6 from "..//..//assets/event (6).jpg";
+import Event7 from "..//..//assets/event (7).jpg";
+import Event8 from "..//..//assets/event (8).jpg";
+import Event9 from "..//..//assets/event (9).jpg";
 
 // Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/effect-coverflow';
-import 'swiper/css/pagination';
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
 
-import './styles.css';
+import "./styles.css";
 
 // import required modules
-import { EffectCoverflow, Pagination } from 'swiper/modules';
+import { EffectCoverflow, Pagination } from "swiper/modules";
 
 export default function App() {
   return (
     <>
       <Swiper
-        effect={'coverflow'}
+        effect={"coverflow"}
         grabCursor={true}
         centeredSlides={true}
-        slidesPerView={'auto'}
+        slidesPerView={"auto"}
         coverflowEffect={{
           rotate: 50,
           stretch: 0,
@@ -66,7 +66,6 @@ export default function App() {
         <SwiperSlide>
           <img src={Event9} />
         </SwiperSlide>
-  
       </Swiper>
     </>
   );

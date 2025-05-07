@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet-async";
 const ContactUs = () => {
   return (
     <div className="w-11/12 mx-auto my-16">
-       <Helmet>
+      <Helmet>
         <title>Contact Us | Conference Event</title>
       </Helmet>
       <section className="py-6 dark:bg-gray-100 dark:bg-gray-100 dark:text-gray-900 dark:text-gray-900">
@@ -92,7 +92,6 @@ const ContactUs = () => {
           </form>
         </div>
       </section>
-
     </div>
   );
 };

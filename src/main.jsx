@@ -20,9 +20,8 @@ import Signup from "./Components/Auth/Signup.jsx";
 import EventDetails from "./Components/Event Details/EventDetails.jsx";
 import Teams from "./Components/Teams/Teams.jsx";
 import PrivateRoute from "./PrivateRoute/PrivateRoute.jsx";
-import "./index.css"; 
+import "./index.css";
 import MyProfile from "./Components/MyProfile/MyProfile.jsx";
-
 
 const router = createBrowserRouter([
   {
@@ -81,18 +80,30 @@ const router = createBrowserRouter([
         element: <Signup></Signup>,
       },
       {
-        path: '/event-details/:id',
-        element: <PrivateRoute><EventDetails></EventDetails></PrivateRoute>,
+        path: "/event-details/:id",
+        element: (
+          <PrivateRoute>
+            <EventDetails></EventDetails>
+          </PrivateRoute>
+        ),
         loader: () => fetch("/event.json"),
       },
       {
-        path: '/teams',
-        element: <PrivateRoute><Teams></Teams></PrivateRoute>,
+        path: "/teams",
+        element: (
+          <PrivateRoute>
+            <Teams></Teams>
+          </PrivateRoute>
+        ),
       },
       {
-        path: '/my-profile',
-        element: <PrivateRoute><MyProfile></MyProfile></PrivateRoute> 
-      }
+        path: "/my-profile",
+        element: (
+          <PrivateRoute>
+            <MyProfile></MyProfile>
+          </PrivateRoute>
+        ),
+      },
     ],
   },
 ]);
