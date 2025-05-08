@@ -10,6 +10,7 @@ const MyProfile = () => {
     const name = e.target.name.value;
     const photourl = e.target.photourl.value;
     console.log(name, photourl);
+    document.getElementById('userName').innerText = name;
   };
 
   return (

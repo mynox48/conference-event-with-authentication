@@ -12,6 +12,7 @@ https://github.com/programming-hero-web-course1/b11a9-react-authentication-freel
 - Email and Passowrd login using Firebase Authentication
 - Google sign in Integration
 - Protected Routes for event details and profile
+- Protected Route for Teams. I will show after login.
 - Forget Password functionality
 - Dynamics page titles using React Helmet
 - User image show after login beside the logout button and User name will show if hover on image
