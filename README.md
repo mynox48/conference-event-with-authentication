@@ -7,6 +7,7 @@ Conference Event is a modern single-page application (SPA) built with React that
 # GitHub Link: 
 https://github.com/programming-hero-web-course1/b11a9-react-authentication-freelancer-rased
 
+# Live Link: https://a9-conference-event.netlify.app/
 
 # Key Features
 - Email and Passowrd login using Firebase Authentication
@@ -26,6 +27,19 @@ https://github.com/programming-hero-web-course1/b11a9-react-authentication-freel
 - Added back to home button in 404 page
 - Toggle eye button
 - Toast integration
+
+
+## Main Technologies Used
+
+- React.js
+- Firebase Authentication
+- React Router
+- React Helmet
+- Swiper.js
+- React Toastify
+- Netlify
+- JavaScript (ES6+)
+- CSS / Responsive Design
 
 
 # JSON Data
@@ -75,19 +89,5 @@ Create a `.env.local` file in root
 - Hosted on: Netlify
 
 
-
-
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
 
 
